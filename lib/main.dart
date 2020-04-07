@@ -5,16 +5,13 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
-  
+
   @override
   Widget build(BuildContext context) {
-    
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.orange
-      ),
-      home: MyHomePage(title: 'Snacko version Manaos'),
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: MyHomePage(title: ''),
     );
   }
 }
@@ -40,11 +37,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: NavDrawer(),
+      backgroundColor: HexColor("#FAFAFA"),
       appBar: AppBar(
         title: Text(widget.title),
       ),
@@ -53,94 +50,106 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            new Container(
-              height: 130,
-              padding: const EdgeInsets.only(left: 15.0, right: 15, top: 15, bottom: 15),
-              color: HexColor("#FFB100"),
-              child: Image.asset('assets/images/logo_snacko_small.png', height: 10, width: 10),
-            ),
-             new Container(
-              height: 50,
-              alignment: Alignment.center,
-              color: HexColor("#FCCA37"),
-              child: Text('JVR SRL', style: TextStyle(color: Colors.black), textAlign: TextAlign.center,),
-            ),
-            new Container(
-              margin: const EdgeInsets.only(left: 15.0, right: 15, top: 5),
-              child: FlatButton(
-                onPressed: () {},
-                highlightColor: Colors.orange,
-                child: Text('Nuevo pedido', style: TextStyle(color: Colors.black)),
-                textColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                    side: BorderSide(
-                        color:  HexColor("#FCCA37"), width: 1.5, style: BorderStyle.solid),
-                    borderRadius: BorderRadius.circular(10)),
+            Image.asset('assets/images/logo_guinart.png', height: 100, width: 200, alignment: Alignment.center,),
+
+            new Card(
+              margin: const EdgeInsets.only(left: 15.0, right: 15, top: 15),
+              shape: RoundedRectangleBorder(
+                side: BorderSide(color: Colors.white70, width: 1),
+                borderRadius: BorderRadius.circular(10),
               ),
-            ),
-            new Container(
-              margin: const EdgeInsets.only(left: 15.0, right: 15, top: 5),
-              child: FlatButton(
-                onPressed: () {},
-                  highlightColor: Colors.orange,
-                child: Text('Consulta de pedidos', style: TextStyle(color: Colors.black)),
-                textColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                    side: BorderSide(
-                        color:  HexColor("#FCCA37"), width: 1.5, style: BorderStyle.solid),
-                    borderRadius: BorderRadius.circular(10)),
-              ),
-            ),
-            new Container(
-              margin: const EdgeInsets.only(left: 15.0, right: 15, top: 5),
-              child: FlatButton(
-                onPressed: () {},
-                  highlightColor: Colors.orange,
-                child: Text('Cuenta corriente', style: TextStyle(color: Colors.black)),
-                textColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                    side: BorderSide(
-                        color:  HexColor("#FCCA37"), width: 1.5, style: BorderStyle.solid),
-                    borderRadius: BorderRadius.circular(10)),
-              ),
-            ),
-            new Container(
-              margin: const EdgeInsets.only(left: 15.0, right: 15, top: 5),
-              child: FlatButton(
-                onPressed: () {},
-                  highlightColor: Colors.orange,
-                child: Text('Lista de precios', style: TextStyle(color: Colors.black)),
-                textColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                    side: BorderSide(
-                        color:  HexColor("#FCCA37"), width: 1.5, style: BorderStyle.solid),
-                    borderRadius: BorderRadius.circular(10)),
-              ),
-            ),
-            new Container(
-              margin: const EdgeInsets.only(left: 15.0, right: 15, top: 5),
-              child: FlatButton(
-                onPressed: () {},
-                  highlightColor: Colors.orange,
-                child: Text('Autorizaciones', style: TextStyle(color: Colors.black)),
-                textColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                    side: BorderSide(
-                        color: HexColor("#FCCA37"), width: 1.5, style: BorderStyle.solid),
-                    borderRadius: BorderRadius.circular(10)),
-              ),
-            ),
-            new Container(
-              margin: const EdgeInsets.only(left: 15.0, right: 15, top: 5),
-              child: FlatButton(
-                onPressed: () {},
-                  highlightColor: Colors.orange,
-                child: Text('Notificaciones', style: TextStyle(color: Colors.black)),
-                textColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                    side: BorderSide(
-                        color: HexColor("#FCCA37"), width: 1.5, style: BorderStyle.solid),
-                    borderRadius: BorderRadius.circular(10)),
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    Image.asset('assets/images/icon_user.png', height: 35, width: 35, alignment: Alignment.topLeft,),
+                    SizedBox(height: 5),
+                    Text('Username or e-mail',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14),
+                        textAlign: TextAlign.start),
+                    TextFormField(
+                      decoration: const InputDecoration(
+                          hintText: 'Enter your email',
+                          hintStyle: TextStyle(fontSize: 12)),
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return 'Please enter some text';
+                        }
+                        return null;
+                      },
+                    ),
+                    SizedBox(height: 15),
+                    Image.asset('assets/images/icon_user.png', height: 35, width: 35, alignment: Alignment.topLeft,),
+                    SizedBox(height: 5),
+                    Text(
+                      'Password',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14),
+                      textAlign: TextAlign.start,
+                    ),
+                    TextFormField(
+                      decoration: const InputDecoration(
+                        hintText: 'Password',
+                        hintStyle: TextStyle(fontSize: 12),
+                      ),
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return 'Please enter some text';
+                        }
+                        return null;
+                      },
+                    ),
+                       SizedBox(height: 5),
+                     Text('Hide password',
+                        style: TextStyle(
+                            color: HexColor("#13356B"),
+                            fontWeight: FontWeight.w300,
+                            fontSize: 12),
+                        textAlign: TextAlign.start),
+                        SizedBox(height: 5),
+                     Text('I forgot my password',
+                        style: TextStyle(
+                            color: HexColor("#13356B"),
+                            fontWeight: FontWeight.normal,
+                            fontSize: 12),
+                        textAlign: TextAlign.end),
+                    SizedBox(height: 15),
+                    Container(
+                      height: 40.0,
+                      child: RaisedButton(
+                        onPressed: () {},
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0)),
+                        padding: EdgeInsets.all(0.0),
+                        child: Ink(
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [HexColor("#194B9C"), HexColor("#13356B")],
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                              ),
+                              borderRadius: BorderRadius.circular(10.0)),
+                          child: Container(
+                            constraints: BoxConstraints(
+                                maxWidth: 300.0, minHeight: 50.0),
+                            alignment: Alignment.center,
+                            child: Text(
+                              "Login",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
