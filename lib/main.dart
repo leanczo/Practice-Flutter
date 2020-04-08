@@ -3,7 +3,6 @@ import './widgets/NavDrawer.dart';
 
 void main() => runApp(MyApp());
 
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -23,6 +22,15 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  // bool _obscureText;
+
+  //  void stateSetter() {
+  //   setState(() {
+  //     _obscureText = !_obscureText;
+  //   });
+  // }
+
   @override
   Widget build(BuildContext context) {
   
@@ -32,7 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: _body());
+        body: _body(),
+        );
   }
 }
 
@@ -144,14 +153,19 @@ _passwordEntry() {
   );
 }
 
-_hidePasswordText() {
-  return Text('Hide password',
+_hidePasswordText()  {
+
+
+  return 
+  new GestureDetector(
+  onTap: (){},
+  child:   Text('Hide password',
       style: TextStyle(
           color: Color(0xff13356b),
           fontWeight: FontWeight.w300,
           fontSize: 12),
-      textAlign: TextAlign.start);
-      
+      textAlign: TextAlign.start),
+);
 }
 
 _forgotPasswordText() {
@@ -167,7 +181,7 @@ _loginButton() {
   return Container(
     height: 40.0,
     child: RaisedButton(
-      onPressed: () { },
+      onPressed: (){},
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
       padding: EdgeInsets.all(0.0),
       child: Ink(
