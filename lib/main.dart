@@ -4,8 +4,6 @@ import './widgets/NavDrawer.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,18 +12,6 @@ class MyApp extends StatelessWidget {
       home: MyHomePage(title: ''),
     );
   }
-}
-
-class HexColor extends Color {
-  static int _getColorFromHex(String hexColor) {
-    hexColor = hexColor.toUpperCase().replaceAll("#", "");
-    if (hexColor.length == 6) {
-      hexColor = "FF" + hexColor;
-    }
-    return int.parse(hexColor, radix: 16);
-  }
-
-  HexColor(final String hexColor) : super(_getColorFromHex(hexColor));
 }
 
 class MyHomePage extends StatefulWidget {
@@ -40,14 +26,30 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavDrawer(),
-      backgroundColor: HexColor("#FAFAFA"),
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
+        drawer: NavDrawer(),
+        backgroundColor: Color(0xfffafafa),
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: _body());
+  }
+}
+
+_body() {
+  return LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints viewportConstraints) {
+    return _scrollView(viewportConstraints);
+  });
+}
+
+_scrollView(BoxConstraints viewportConstraints) {
+  return SingleChildScrollView(
+    child: ConstrainedBox(
+        constraints: BoxConstraints(
+          minHeight: viewportConstraints.maxHeight,
+        ),
         child: Padding(
-          padding: EdgeInsets.all(25.0),
+          padding: EdgeInsets.all(20.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -56,10 +58,8 @@ class _MyHomePageState extends State<MyHomePage> {
               _card(),
             ],
           ),
-        ),
-      ),
-    );
-  }
+        )),
+  );
 }
 
 _card() {
@@ -69,7 +69,7 @@ _card() {
       borderRadius: BorderRadius.circular(10),
     ),
     child: Padding(
-      padding: EdgeInsets.all(25.0),
+      padding: EdgeInsets.all(20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
@@ -77,7 +77,7 @@ _card() {
           SizedBox(height: 5),
           _usernameText(),
           _usernameEntry(),
-          SizedBox(height: 15),
+          SizedBox(height: 10),
           _imageUser(),
           SizedBox(height: 5),
           _passwordText(),
@@ -85,7 +85,7 @@ _card() {
           SizedBox(height: 5),
           _hidePasswordText(),
           _forgotPasswordText(),
-          SizedBox(height: 15),
+          SizedBox(height: 10),
           _loginButton(),
         ],
       ),
@@ -140,7 +140,7 @@ _passwordEntry() {
 _hidePasswordText() {
   return Text('Hide password',
       style: TextStyle(
-          color: HexColor("#13356B"),
+          color: Color(0xff13356b),
           fontWeight: FontWeight.w300,
           fontSize: 12),
       textAlign: TextAlign.start);
@@ -149,7 +149,7 @@ _hidePasswordText() {
 _forgotPasswordText() {
   return Text('I forgot my password',
       style: TextStyle(
-          color: HexColor("#13356B"),
+          color: Color(0xff13356b),
           fontWeight: FontWeight.normal,
           fontSize: 12),
       textAlign: TextAlign.end);
@@ -165,13 +165,13 @@ _loginButton() {
       child: Ink(
         decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [HexColor("#194B9C"), HexColor("#13356B")],
+              colors: [Color(0Xff194b9c), Color(0xff13356b)],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
             ),
             borderRadius: BorderRadius.circular(10.0)),
         child: Container(
-          constraints: BoxConstraints(minHeight: 50.0),
+          constraints: BoxConstraints(minHeight: 40.0),
           alignment: Alignment.center,
           child: Text(
             "Login",
