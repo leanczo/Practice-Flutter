@@ -3,6 +3,7 @@ import './widgets/NavDrawer.dart';
 
 void main() => runApp(MyApp());
 
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -25,6 +25,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+  
     return Scaffold(
         drawer: NavDrawer(),
         backgroundColor: Color(0xfffafafa),
@@ -103,7 +104,9 @@ _usernameText() {
 _usernameEntry() {
   return TextFormField(
     decoration: const InputDecoration(
-        hintText: 'Enter your email', hintStyle: TextStyle(fontSize: 12)),
+        hintMaxLines: 1,
+        hintText: 'Enter your email', 
+        hintStyle: TextStyle(fontSize: 12)),
     validator: (value) {
       if (value.isEmpty) {
         return 'Please enter some text';
@@ -123,10 +126,14 @@ _passwordText() {
 }
 
 _passwordEntry() {
-  return TextFormField(
-    decoration: const InputDecoration(
-      hintText: 'Password',
-      hintStyle: TextStyle(fontSize: 12),
+    return TextFormField(
+      obscureText: true,
+      decoration: const InputDecoration(
+        hintMaxLines: 1,
+        hintText: 'Password',
+        hintStyle: TextStyle(fontSize: 12),
+                             
+
     ),
     validator: (value) {
       if (value.isEmpty) {
@@ -144,6 +151,7 @@ _hidePasswordText() {
           fontWeight: FontWeight.w300,
           fontSize: 12),
       textAlign: TextAlign.start);
+      
 }
 
 _forgotPasswordText() {
@@ -159,7 +167,7 @@ _loginButton() {
   return Container(
     height: 40.0,
     child: RaisedButton(
-      onPressed: () {},
+      onPressed: () { },
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
       padding: EdgeInsets.all(0.0),
       child: Ink(
