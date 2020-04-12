@@ -70,7 +70,6 @@ class _MyHomePageState extends State<MyHomePage> {
                             _imageUser(),
                             SizedBox(height: 5),
                             _passwordText(),
-
                             TextFormField(
                               obscureText: _obscureText,
                               decoration: const InputDecoration(
@@ -85,15 +84,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                 return null;
                               },
                             ),
-
                             SizedBox(height: 5),
-
                             GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  _obscureText = !_obscureText;
-                                });
-                              },
+                              onTap: stateSetter,
                               child: Text('Hide password',
                                   style: TextStyle(
                                       color: Color(0xff13356b),
@@ -101,7 +94,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                       fontSize: 12),
                                   textAlign: TextAlign.start),
                             ),
-
                             _forgotPasswordText(),
                             SizedBox(height: 10),
                             _loginButton(),
@@ -117,36 +109,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-_body() {
-  return LayoutBuilder(
-      builder: (BuildContext context, BoxConstraints viewportConstraints) {
-    return _scrollView(viewportConstraints);
-  });
-}
-
-_scrollView(BoxConstraints viewportConstraints) {
-  return SingleChildScrollView(
-    child: ConstrainedBox(
-        constraints: BoxConstraints(
-          minHeight: viewportConstraints.maxHeight,
-        ),
-        child: Padding(
-          padding: EdgeInsets.all(20.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              _imageLogo(),
-            ],
-          ),
-        )),
-  );
-}
-
-// _card() {
-//   return
-// }
 
 _usernameText() {
   return Text('Username or e-mail',
@@ -178,36 +140,6 @@ _passwordText() {
     textAlign: TextAlign.start,
   );
 }
-
-// _passwordEntry() {
-//     return TextFormField(
-//       obscureText: _obscureText,
-//       decoration: const InputDecoration(
-//         hintMaxLines: 1,
-//         hintText: 'Password',
-//         hintStyle: TextStyle(fontSize: 12),
-
-//     ),
-//     validator: (value) {
-//       if (value.isEmpty) {
-//         return 'Please enter some text';
-//       }
-//       return null;
-//     },
-//   );
-// }
-
-// _hidePasswordText() {
-//   return new GestureDetector(
-//     onTap: () {},
-//     child: Text('Hide password',
-//         style: TextStyle(
-//             color: Color(0xff13356b),
-//             fontWeight: FontWeight.w300,
-//             fontSize: 12),
-//         textAlign: TextAlign.start),
-//   );
-// }
 
 _forgotPasswordText() {
   return Text('I forgot my password',
