@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './widgets/nav_drawer.dart';
+import '../widgets/nav_drawer.dart';
 
 void main() => runApp(MyApp());
 
@@ -40,72 +40,72 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints viewportConstraints) {
-        return SingleChildScrollView(
-          child: ConstrainedBox(
-              constraints: BoxConstraints(
-                minHeight: viewportConstraints.maxHeight,
-              ),
-              child: Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: <Widget>[
-                    _imageLogo(),
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(color: Colors.white70, width: 1),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.all(20.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: <Widget>[
-                            _imageUser(),
-                            SizedBox(height: 5),
-                            _usernameText(),
-                            _usernameEntry(),
-                            SizedBox(height: 10),
-                            _imageUser(),
-                            SizedBox(height: 5),
-                            _passwordText(),
-                            TextFormField(
-                              obscureText: _obscureText,
-                              decoration: const InputDecoration(
-                                hintMaxLines: 1,
-                                hintText: 'Password',
-                                hintStyle: TextStyle(fontSize: 12),
-                              ),
-                              validator: (value) {
-                                if (value.isEmpty) {
-                                  return 'Please enter some text';
-                                }
-                                return null;
-                              },
+            return SingleChildScrollView(
+              child: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    minHeight: viewportConstraints.maxHeight,
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(20.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: <Widget>[
+                        _imageLogo(),
+                        Card(
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide(color: Colors.white70, width: 1),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.all(20.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: <Widget>[
+                                _imageUser(),
+                                SizedBox(height: 5),
+                                _usernameText(),
+                                _usernameEntry(),
+                                SizedBox(height: 10),
+                                _imageUser(),
+                                SizedBox(height: 5),
+                                _passwordText(),
+                                TextFormField(
+                                  obscureText: _obscureText,
+                                  decoration: const InputDecoration(
+                                    hintMaxLines: 1,
+                                    hintText: 'Password',
+                                    hintStyle: TextStyle(fontSize: 12),
+                                  ),
+                                  validator: (value) {
+                                    if (value.isEmpty) {
+                                      return 'Please enter some text';
+                                    }
+                                    return null;
+                                  },
+                                ),
+                                SizedBox(height: 5),
+                                GestureDetector(
+                                  onTap: stateSetter,
+                                  child: Text('Hide password',
+                                      style: TextStyle(
+                                          color: Color(0xff13356b),
+                                          fontWeight: FontWeight.w300,
+                                          fontSize: 12),
+                                      textAlign: TextAlign.start),
+                                ),
+                                _forgotPasswordText(),
+                                SizedBox(height: 10),
+                                _loginButton(),
+                              ],
                             ),
-                            SizedBox(height: 5),
-                            GestureDetector(
-                              onTap: stateSetter,
-                              child: Text('Hide password',
-                                  style: TextStyle(
-                                      color: Color(0xff13356b),
-                                      fontWeight: FontWeight.w300,
-                                      fontSize: 12),
-                                  textAlign: TextAlign.start),
-                            ),
-                            _forgotPasswordText(),
-                            SizedBox(height: 10),
-                            _loginButton(),
-                          ],
+                          ),
                         ),
-                      ),
+                      ],
                     ),
-                  ],
-                ),
-              )),
-        );
-      }),
+                  )),
+            );
+          }),
     );
   }
 }
