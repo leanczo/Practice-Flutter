@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import '../enums/action_type.dart';
-import '../models/change_order_model.dart';
 
 import '../enums/action_type.dart';
 
@@ -16,7 +15,6 @@ class ActionModel {
   final String address;
   final DateTime date;
   final ActionType actionType;
-  final ChangeOrderModel changeOrder;
   bool synced;
 
   ActionModel(
@@ -30,7 +28,6 @@ class ActionModel {
         this.address,
         this.date,
         this.actionType,
-        this.changeOrder,
         this.synced = false});
 
   Map<String, dynamic> toMap() => {
@@ -43,7 +40,6 @@ class ActionModel {
     "address": address,
     "stamp": date.toIso8601String(),
     "actionType": getActionString(actionType),
-    "changeOrder": changeOrder.toApi(toSyncWithApi: true),
     "inputSourceId": 1,
   };
 
@@ -58,7 +54,6 @@ class ActionModel {
     "address": address,
     "date": date.toIso8601String(),
     "actionType": getActionString(actionType),
-    "changeOrderJson": jsonEncode(changeOrder.toMap()),
     "synced": synced ? 1 : 0
   };
 
@@ -74,8 +69,6 @@ class ActionModel {
       address: json['address'],
       date: DateTime.parse(json['date']),
       actionType: getActionType(json['actionType']),
-      changeOrder:
-      ChangeOrderModel.fromMap(jsonDecode(json['changeOrderJson'])),
       synced: json['synced'] == 1 ? true : false,
     );
   }

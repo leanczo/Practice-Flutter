@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'ui/nav_drawer.dart';
 import 'ui/home_screen.dart';
+import 'ui/bookmarks_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes : {
         HomeScreen.routeName : (context) => HomeScreen(title: "Home"),
+        BookmarksScreen.routeName : (context) => BookmarksScreen(title: "Bookmarks"),
       }
     );
 }

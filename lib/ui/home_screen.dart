@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hello_world/components/devotion_list.dart';
+import 'package:hello_world/viewmodels/devotions_view_model.dart';
+import 'package:hello_world/models/devotion_model.dart';
 import '../ui/nav_drawer.dart';
 import '../ui/app_bar.dart';
 
@@ -49,5 +52,13 @@ class _CustomerHomeScreenState extends State<HomeScreen> {
 
   openNavigationDrawer() {
     _scaffoldKey.currentState.openDrawer();
+  }
+
+  _projectListView(List<DevotionModel> devotions) {
+    return DevotionList(budget: devotions, onItemTap: onBudgetTap);
+  }
+
+  onBudgetTap(DevotionModel budget) {
+    print(budget.title);
   }
 }
