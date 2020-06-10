@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './widgets/nav_drawer.dart';
+import 'ui/nav_drawer.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,8 +10,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: MyHomePage(title: ''),
+      initialRoute: '/',
+      routes : {
+        '/' : (context) =>
+      }
     );
-  }
+}
 }
 
 class MyHomePage extends StatefulWidget {

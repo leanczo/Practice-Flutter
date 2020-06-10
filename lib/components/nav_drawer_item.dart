@@ -1,5 +1,5 @@
 import '../constans/k_colors.dart';
-import '../ui/employee/main_menu_screen.dart';
+// import '../ui/employee/main_menu_screen.dart';
 import '../utilities/screen_args.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
@@ -45,8 +45,7 @@ class NavigationDrawerItem extends StatelessWidget {
         if (routeName != null) {
           Navigator.pop(context);
           Navigator.of(context).pushNamedAndRemoveUntil(routeName, (route) {
-            if (route.settings.name == '/' ||
-                route.settings.name == MainMenuScreen.routeName) {
+            if (route.settings.name == '/' ) {
               return true;
             }
             return false;

@@ -2,27 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="415e58f2-980e-4f62-8668-c7c4c1d37335" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/common_screens/login_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/components/nav_drawer_item.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/constans/k_colors.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/enums/action_type.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/enums/from_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/enums/option_type.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/action_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/change_order_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/cost_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/image_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/job_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/option_container_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/option_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utilities/screen_args.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_for_Android.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_for_Android.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/hello_world_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/hello_world_android.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/nav_drawer_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/nav_drawer_item.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/snacko.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/NavDrawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/nav_drawer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +42,7 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="SvnConfiguration">
@@ -77,25 +63,29 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="423" y="172" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591733764891" />
-    <state x="225" y="0" key="CommitChangelistDialog2" timestamp="1591736272886">
+    <state x="225" y="0" key="CommitChangelistDialog2" timestamp="1591791790779">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="225" y="0" key="CommitChangelistDialog2/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591736272886" />
-    <state width="1367" height="189" key="GridCell.Tab.0.bottom" timestamp="1591733931451">
+    <state x="225" y="0" key="CommitChangelistDialog2/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591791790779" />
+    <state width="1367" height="189" key="GridCell.Tab.0.bottom" timestamp="1591737635925">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1367" height="189" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591733931451" />
-    <state width="1367" height="189" key="GridCell.Tab.0.center" timestamp="1591733931451">
+    <state width="1367" height="189" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591737635925" />
+    <state width="1367" height="189" key="GridCell.Tab.0.center" timestamp="1591737635925">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1367" height="189" key="GridCell.Tab.0.center/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591733931451" />
-    <state width="1367" height="189" key="GridCell.Tab.0.left" timestamp="1591733931451">
+    <state width="1367" height="189" key="GridCell.Tab.0.center/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591737635925" />
+    <state width="1367" height="189" key="GridCell.Tab.0.left" timestamp="1591737635925">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1367" height="189" key="GridCell.Tab.0.left/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591733931451" />
-    <state width="1367" height="189" key="GridCell.Tab.0.right" timestamp="1591733931451">
+    <state width="1367" height="189" key="GridCell.Tab.0.left/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591737635925" />
+    <state width="1367" height="189" key="GridCell.Tab.0.right" timestamp="1591737635925">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1367" height="189" key="GridCell.Tab.0.right/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591733931451" />
+    <state width="1367" height="189" key="GridCell.Tab.0.right/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591737635925" />
+    <state x="273" y="0" key="SettingsEditor" timestamp="1591799278350">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="273" y="0" key="SettingsEditor/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591799278350" />
   </component>
 </project>
