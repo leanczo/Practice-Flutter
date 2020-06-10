@@ -1,3 +1,5 @@
+import 'package:hello_world/ui/home_screen.dart';
+
 import '../constans/k_colors.dart';
 // import '../ui/employee/main_menu_screen.dart';
 import '../utilities/screen_args.dart';
@@ -45,7 +47,8 @@ class NavigationDrawerItem extends StatelessWidget {
         if (routeName != null) {
           Navigator.pop(context);
           Navigator.of(context).pushNamedAndRemoveUntil(routeName, (route) {
-            if (route.settings.name == '/' ) {
+            if (route.settings.name == '/' ||
+                route.settings.name == HomeScreen.routeName) {
               return true;
             }
             return false;

@@ -1,15 +1,18 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../ui/nav_drawer.dart';
+import '../ui/app_bar.dart';
 
-class CustomerHomeScreen extends StatefulWidget {
-  CustomerHomeScreen({Key key, this.title}) : super(key: key);
-  static const routeName = '/customerHome';
+class HomeScreen extends StatefulWidget {
+  HomeScreen({Key key, this.title}) : super(key: key);
+  static const routeName = '/';
   final String title;
 
   @override
   _CustomerHomeScreenState createState() => _CustomerHomeScreenState();
 }
 
-class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
+class _CustomerHomeScreenState extends State<HomeScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
@@ -21,7 +24,7 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      drawer: CustomerNavDrawer(),
+      drawer: NavDrawer(),
       appBar: CustomAppBar(
         widget.title,
         false,
@@ -31,11 +34,12 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
         child: Padding(
           padding: EdgeInsets.only(left: 25, top: 25, right: 25),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              _mainScreenTitle(user),
-              SizedBox(height: 15),
-              _asyncCustomerProjects(),
+              // _mainScreenTitle(user),
+              Text('Home'),
+              // _asyncCustomerProjects(),
             ],
           ),
         ),
@@ -46,3 +50,4 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
   openNavigationDrawer() {
     _scaffoldKey.currentState.openDrawer();
   }
+}
