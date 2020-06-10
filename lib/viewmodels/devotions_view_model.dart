@@ -2,10 +2,10 @@ import '../models/devotion_model.dart';
 import '../utilities/IRepoDevotions.dart';
 import 'package:flutter/cupertino.dart';
 
-class CustomerViewModel extends ChangeNotifier {
+class DevotionsViewModel extends ChangeNotifier {
   final IRepoCustomer repository;
 
-  CustomerViewModel({this.repository});
+  DevotionsViewModel({this.repository});
 
   String userName;
 

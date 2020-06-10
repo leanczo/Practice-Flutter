@@ -4,6 +4,9 @@ import 'package:hello_world/components/devotion_list.dart';
 import 'package:hello_world/viewmodels/devotions_view_model.dart';
 import 'package:hello_world/models/devotion_model.dart';
 import '../ui/nav_drawer.dart';
+import 'package:hello_world/constans/k_strings.dart';
+import 'package:hello_world/constans/k_colors.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import '../ui/app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,6 +20,8 @@ class HomeScreen extends StatefulWidget {
 
 class _CustomerHomeScreenState extends State<HomeScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  DevotionsViewModel viewModel;
+  List<DevotionModel> _projectList;
 
   @override
   void initState() {
@@ -41,12 +46,35 @@ class _CustomerHomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               // _mainScreenTitle(user),
-              Text('Home'),
+              _asyncCustomerProjects(),
               // _asyncCustomerProjects(),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  _asyncCustomerProjects() {
+    return FutureBuilder<List<DevotionModel>>(
+      future: viewModel.getDevotions(),
+      builder: (context, snapshot) {
+        _projectList = snapshot.data;
+        if (snapshot.hasData &&
+            _projectList != null &&
+            _projectList.length != 0) {
+          return _projectListView(_projectList);
+        } else if (snapshot.hasError) {
+          return Center(child: Text(kGeneralErrorMessage));
+        } else if (_projectList != null && _projectList.length == 0) {
+          return Center(child: Text(kCustomerHomeScreenEmptyProjectList));
+        }
+        return Center(
+            child: SpinKitThreeBounce(
+              color: kPrimaryColor,
+              size: 40.0,
+            ));
+      },
     );
   }
 

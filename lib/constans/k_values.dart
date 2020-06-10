@@ -4,7 +4,7 @@ const kMainCardRoundedBorder = 10.0;
 const kItemCardRoundedBorder = 5.0;
 const kInputFontSize = 12.0;
 const kLabelFontSize = 14.0;
-const kApiUrl = "http://192.168.0.31:44305/api/";
+const kApiUrl = "https://jsonplaceholder.typicode.com/";
 
 const String k_IS_LOGGED_IN = "is_logged_in";
 const String k_NAME = "name";

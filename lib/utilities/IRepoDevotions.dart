@@ -5,13 +5,6 @@ class IRepoCustomer {
     return null;
   }
 
-  Future<Type> fetchData(Type generic) async {
-    return null;
-  }
-
-  Future<Type> syncChangeOrder(Type generic) async {
-    return null;
-  }
 
   String getUserName() {
     return null;
