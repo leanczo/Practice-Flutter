@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/constans/k_colors.dart';
 import 'package:hello_world/ui/home_screen.dart';
+import 'package:hello_world/ui/bookmarks_screen.dart';
 import '../components/nav_drawer_item.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -31,6 +32,7 @@ class NavDrawer extends StatelessWidget {
                     context: context,
                     title: 'Bookmarks',
                     iconPath: 'images/icon_user.png',
+                    routeName: BookmarksScreen.routeName,
                   ),
                   NavigationDrawerItem(
                     context: context,

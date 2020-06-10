@@ -38,20 +38,14 @@ class CustomAppBar extends AppBar {
         )
       ],
     ),
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.vertical(
-        bottom: Radius.circular(30.0),
-      ),
-    ),
     flexibleSpace: Container(
       decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: <Color>[kPrimaryColor, kBlueDarkColor],
+            colors: <Color>[Color(0xFF212121), Color(0xFF212121)],
           ),
-          borderRadius:
-          BorderRadius.vertical(bottom: Radius.circular(30.0))),
+          ),
     ),
   );
 }
