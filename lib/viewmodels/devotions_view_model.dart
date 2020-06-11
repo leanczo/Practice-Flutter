@@ -3,7 +3,7 @@ import '../utilities/IRepoDevotions.dart';
 import 'package:flutter/cupertino.dart';
 
 class DevotionsViewModel extends ChangeNotifier {
-  final IRepoCustomer repository;
+  final IRepoDevotions repository;
 
   DevotionsViewModel({this.repository});
 
@@ -11,12 +11,11 @@ class DevotionsViewModel extends ChangeNotifier {
 
   init() {
     repository.init();
-    userName = repository.getUserName();
   }
 
   Future<List<DevotionModel>> getDevotions() async {
     try{
-      return await repository.getCustomerBudgets();
+      return new List<DevotionModel>();
     }
     catch (e){
       print(e.toString());

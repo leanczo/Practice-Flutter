@@ -9,7 +9,7 @@ import 'package:hello_world/support/network/network_response.dart';
 import 'package:hello_world/utilities/IRepoDevotions.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class RepositoryDevotions implements IRepoCustomer {
+class RepositoryDevotions implements IRepoDevotions {
   SharedPreferences prefs;
 
   RepositoryDevotions({this.prefs});

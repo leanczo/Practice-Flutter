@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="415e58f2-980e-4f62-8668-c7c4c1d37335" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/constans/k_strings.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/services/repository_devotions.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/constans/k_values.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constans/k_values.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/devotion_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/devotion_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/services/repository_devotions.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/repository_devotions.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ui/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/home_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/utilities/IRepoDevotions.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utilities/IRepoDevotions.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/viewmodels/devotions_view_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/viewmodels/devotions_view_model.dart" afterDir="false" />
@@ -28,6 +23,7 @@
       </list>
     </option>
   </component>
+  <component name="FlutterView" splitter-proportion="0.31852987" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -46,6 +42,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DEBUGGABLE_DEVICE" value="motorola-motog3-192.168.0.16:5555" />
+    <property name="DEBUGGABLE_PROCESS" value="com.example.hello_world" />
+    <property name="DEBUGGER_ID" value="Java" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -71,6 +71,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591879912775">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591879912775" />
     <state x="423" y="172" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591733764891">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -79,26 +83,34 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591815301455" />
+    <state x="538" y="134" key="AndroidProcessChooserDialog" timestamp="1591822780144">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="538" y="134" key="AndroidProcessChooserDialog/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591822780144" />
     <state x="225" y="0" key="CommitChangelistDialog2" timestamp="1591814299893">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="225" y="0" key="CommitChangelistDialog2/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591814299893" />
-    <state width="1367" height="196" key="GridCell.Tab.0.bottom" timestamp="1591821188342">
+    <state width="494" height="466" key="DebuggerActiveHint" timestamp="1591880571609">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1367" height="196" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591821188342" />
-    <state width="1367" height="196" key="GridCell.Tab.0.center" timestamp="1591821188342">
+    <state width="494" height="466" key="DebuggerActiveHint/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591880571609" />
+    <state width="1367" height="180" key="GridCell.Tab.0.bottom" timestamp="1591886105466">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1367" height="196" key="GridCell.Tab.0.center/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591821188342" />
-    <state width="1367" height="196" key="GridCell.Tab.0.left" timestamp="1591821188341">
+    <state width="1367" height="180" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591886105466" />
+    <state width="1367" height="180" key="GridCell.Tab.0.center" timestamp="1591886105466">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1367" height="196" key="GridCell.Tab.0.left/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591821188341" />
-    <state width="1367" height="196" key="GridCell.Tab.0.right" timestamp="1591821188342">
+    <state width="1367" height="180" key="GridCell.Tab.0.center/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591886105466" />
+    <state width="1367" height="180" key="GridCell.Tab.0.left" timestamp="1591886105465">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1367" height="196" key="GridCell.Tab.0.right/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591821188342" />
+    <state width="1367" height="180" key="GridCell.Tab.0.left/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591886105465" />
+    <state width="1367" height="180" key="GridCell.Tab.0.right" timestamp="1591886105466">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1367" height="180" key="GridCell.Tab.0.right/0.0.1366.738/1366.0.1280.690@0.0.1366.738" timestamp="1591886105466" />
     <state x="273" y="0" key="SettingsEditor" timestamp="1591799278350">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -120,6 +132,21 @@
           <url>file://$PROJECT_DIR$/lib/services/repository_devotions.dart</url>
           <line>46</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/services/repository_devotions.dart</url>
+          <line>41</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/services/repository_devotions.dart</url>
+          <line>40</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/services/repository_devotions.dart</url>
+          <line>36</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

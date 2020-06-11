@@ -1,6 +1,6 @@
 import '../models/devotion_model.dart';
 
-class IRepoCustomer {
+class IRepoDevotions {
   void init() {
     return null;
   }
